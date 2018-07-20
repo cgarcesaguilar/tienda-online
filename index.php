@@ -6,6 +6,7 @@ require_once "controllers/productos.controller.php";
 
 /*MODELO*/
 require_once "models/productos.model.php";
+require_once "models/rutas.php";
 
 
 

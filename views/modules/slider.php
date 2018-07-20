@@ -3,7 +3,7 @@
       <ul>
         <!-- slide 1 -->
         <li>
-          <img src="img/slider/back_default.jpg" alt="">
+          <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/back_default.jpg" alt="">
           <div class="infoSlide">
             <div class="textoSlide">
               <h1>Camiseta hombre estilo militar</h1>
@@ -12,12 +12,12 @@
                 ver detalle <i class="fas fa-chevron-right"></i>
               </a>
             </div>
-            <img src="img/slider/ropa01.jpg" alt="">
+            <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/ropa01.jpg" alt="">
           </div>
         </li>
         <!-- slide 2 -->
         <li>
-          <img src="img/slider/back_default.jpg" alt="">
+          <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/back_default.jpg" alt="">
           <div class="infoSlide">
             <div class="textoSlide">
               <h1>Bolso para notebook</h1>
@@ -26,12 +26,12 @@
                 ver detalle <i class="fas fa-chevron-right"></i>
               </a>
             </div>
-            <img src="img/slider/accesorio02.jpg" alt="">
+            <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/accesorio02.jpg" alt="">
           </div>
         </li>
         <!-- slide 3 -->
         <li>
-          <img src="img/slider/back_default.jpg" alt="">
+          <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/back_default.jpg" alt="">
           <div class="infoSlide">
             <div class="textoSlide">
               <h1>Zapatillas estilosas</h1>
@@ -40,12 +40,12 @@
                 ver detalle <i class="fas fa-chevron-right"></i>
               </a>
             </div>
-            <img src="img/slider/calzado05.jpg" alt="">
+            <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/calzado05.jpg" alt="">
           </div>
         </li>
         <!-- slide 4 -->
         <li>
-          <img src="img/slider/back_default.jpg" alt="">
+          <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/back_default.jpg" alt="">
           <div class="infoSlide">
             <div class="textoSlide">
               <h1>Equipo de música para el mambo</h1>
@@ -54,7 +54,7 @@
                 ver detalle <i class="fas fa-chevron-right"></i>
               </a>
             </div>
-            <img src="img/slider/tecnologia06.jpg" alt="">
+            <img src="<?php echo $urlBackEnd; ?>views/dist/img/slider/tecnologia06.jpg" alt="">
           </div>
         </li>
 

@@ -55,7 +55,7 @@
         foreach ($categoria as $key => $value) {
           echo '
               <div class="col-lg-2 col-md-4 col-sm-6 col-12">
-                <h2>'.$value["categoria"].'</h2>
+                <a href="'.$value["ruta"].'"><h2>'.$value["categoria"].'</h2></a>
                 <hr>
                 <ul>';
           
