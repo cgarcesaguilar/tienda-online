@@ -2,6 +2,13 @@
 var item = 0
 var itemLi = $("#paginacion li")
 var pausa = false
+
+anchoUl = itemLi.length * 100
+anchoLi = 100 / itemLi
+$(".slider ul").css("width", anchoUl + "%")
+$(".slider li").css("width", anchoLi + "%")
+
+
 $("#paginacion li").click(function () {
 
 	item = $(this).attr("item") - 1
@@ -22,7 +29,7 @@ function animarSlider(item) {
 }
 
 function play() {
-	if(item == 3) {
+	if(item == itemLi.length -1) {
 		item = 0
 	} else {
 		item++
@@ -32,7 +39,7 @@ function play() {
 $("#right").click(function() { 	play() })
 $("#left").click(function() {
 	if(item == 0) {
-		item = 3
+		item = itemLi.length -1
 	} else {
 		item--
 	}

@@ -29,7 +29,8 @@
         echo '<div style="margin-top:100px" >'.$_GET["ruta"].'</div>';
 
     } else {
-        include "modules/slider.php";    
+        include "modules/slider.php";
+        include "modules/ultimos-productos.php";
     }
 
     ?>
