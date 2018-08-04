@@ -47,8 +47,9 @@
       <div class="row">
 
         <?php 
-
-        $categoria = ControllerProductos::ctrMostrarCategorias();
+        $columna = null;
+        $valor = null;
+        $categoria = ControllerProductos::ctrMostrarCategorias($columna, $valor);
 
         //var_dump($categoria);
 
@@ -58,8 +59,9 @@
                 <a href="'.$value["ruta"].'"><h2>'.$value["categoria"].'</h2></a>
                 <hr>
                 <ul>';
-          
-                $subcategoria = ControllerProductos::ctrMostrarSubCategorias($value["id"]);
+                $columna = "id_categoria";
+                $valor = $value["id"];
+                $subcategoria = ControllerProductos::ctrMostrarSubCategorias($columna, $valor);
 
                 foreach ($subcategoria as $key => $value) {
                   echo '<a href="'.$value["ruta"].'"><li>'.$value["subcategoria"].'</li></a>';

@@ -4,7 +4,7 @@ var itemLi = $("#paginacion li")
 var pausa = false
 
 anchoUl = itemLi.length * 100
-anchoLi = 100 / itemLi
+anchoLi = 100 / itemLi.length
 $(".slider ul").css("width", anchoUl + "%")
 $(".slider li").css("width", anchoLi + "%")
 

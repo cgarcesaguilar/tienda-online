@@ -24,9 +24,31 @@
 
     include "modules/header.php";
 
+    $rutaCero = array();
     if ( isset($_GET["ruta"]) ) {
+        $rutaExiste = false;
+        $valorRuta = $_GET["ruta"];
+        $rutaCero = $valorRuta;
+        $rutaCero = explode("/", $rutaCero);
+        $columna = "ruta";
 
-        echo '<div style="margin-top:100px" >'.$_GET["ruta"].'</div>';
+        $categoria = ControllerProductos::ctrMostrarCategorias($columna, $rutaCero[0]);
+  
+        if ( $rutaCero[0] == $categoria["ruta"]) {
+           $rutaExiste = true;
+        } 
+        $subCategorias = ControllerProductos::ctrMostrarSubCategorias($columna, $rutaCero[0]);
+        foreach ($subCategorias as $key => $value) {
+            if ( $valorRuta == $value["ruta"]) {
+                $rutaExiste = true;
+            }
+        }
+        if($rutaExiste == true) {
+            include "modules/productos.php";
+        }
+        else {
+            include "modules/error404.php";
+        }
 
     } else {
         include "modules/slider.php";

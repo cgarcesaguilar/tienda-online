@@ -2,21 +2,21 @@
 
 class ControllerProductos {
 
-	public function ctrMostrarCategorias () {
+	static public function ctrMostrarCategorias ($columna, $valor) {
 
 		$tabla = "categorias";
 
-		$respuesta = ModelProductos::mdlMostrarCategorias($tabla);
+		$respuesta = ModelProductos::mdlMostrarCategorias($tabla, $columna, $valor);
 
 		return $respuesta;
 	
 	}
 
-	static public function ctrMostrarSubCategorias($id) {
+	static public function ctrMostrarSubCategorias($columna, $valor) {
 
 		$tabla = "subcategorias";
 
-		$respuesta = ModelProductos::mdlMostrarSubCategorias($tabla, $id);
+		$respuesta = ModelProductos::mdlMostrarSubCategorias($tabla, $columna, $valor);
 
 		return $respuesta;
 	}
