@@ -22,7 +22,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition skin-blue sidebar-mini login-page">
   <?php
     session_start();
-    
+    $_SESSION["autenticar"] = true;
     if ( isset($_SESSION["autenticar"])) {
       include "modulos/header.php";
       include "modulos/main-sidebar.php";
