@@ -10,12 +10,13 @@ class ControllerEnrutamiento {
 			$ruta == "slider" ||
 			$ruta == "categorias" ||
 			$ruta == "subcategorias" ||
-			$ruta == "productos") {
+			$ruta == "productos" ||
+			$ruta == "salir") {
 
 			include "views/modulos/".$ruta.".php";
 		
 		} else {
-			echo '<div class="content content-wrapper">Error 404</div>';
+			include "views/modulos/error404.php";
 		}
 
 
