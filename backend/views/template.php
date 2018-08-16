@@ -33,11 +33,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
         $enrutar = new ControllerEnrutamiento();
         $enrutar -> enrutamiento();
 
+        include "modulos/modales/modales-".$_GET["ruta"].".php";
+
       } else {
         include "modulos/home.php";
       }
       
       include "modulos/footer.php";
+
+
     } else {
       include "modulos/login.php";
     }
@@ -57,5 +61,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     });
   });
 </script>
+<script src="views/dist/js/slider.js"></script>
 </body>
 </html>

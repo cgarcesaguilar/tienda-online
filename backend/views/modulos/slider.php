@@ -14,7 +14,7 @@
     <!-- Main content -->
     <section class="content container-fluid">
 
-      <button class="btn btn-primary">Agregar Slide <i class="fas fa-plus"></i></button>
+      <button class="btn btn-primary" data-toggle="modal" data-target="#modal-insertar-slider">Agregar Slide <i class="fas fa-plus"></i></button>
 
       <table class="table table-dark">
         <thead>
@@ -40,10 +40,10 @@
                 <td>'.$value["descripcion"].'</td>
                 <td><img width="200" src="views/dist/'.$value["rutaImg"].'"></td>
                 <td width="100">
-                  <button class="btn btn-sm btn-info btnEditarSlider">
+                  <button class="btn btn-sm btn-info btnEditarSlider" idSlider="'.$value["id"].'">
                     <i class="far fa-edit"></i>
                   </button>
-                  <button class="btn btn-sm btn-danger btnEliminarSlider">
+                  <button class="btn btn-sm btn-danger btnEliminarSlider" idSlider="'.$value["id"].'">
                     <i class="far fa-trash-alt"></i>
                   </button>
                 </td>
