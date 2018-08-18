@@ -13,7 +13,17 @@ $(document).ready(function(){
 			processData: false,
 			contentType: false,
 			success: function(respuesta) {
-				console.log(respuesta)
+				if (respuesta == "ok") {
+					swal({
+					  type: 'success',
+					  title: 'Excelente',
+					  text: 'Slider creado con éxito'
+					}).then((result) => {
+					  if (result.value) {
+					    window.location = "slider"
+					  }
+					})
+				}
 			}
 
 		})
@@ -59,5 +69,7 @@ $(document).ready(function(){
 		})
 
 	})
+
+	
 
 })

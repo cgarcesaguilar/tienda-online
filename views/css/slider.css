@@ -1,3 +1,7 @@
+.slider .row {
+	display: block;
+
+}
 .slider {
 	position: relative;
 	overflow: hidden;
@@ -8,14 +12,15 @@
 .slider ul {
 	list-style: none;
 	position: relative;
-	min-width: 400%;
-	padding: 0;
+	padding-left: 0;
+	width: 400%;
 	height: auto;
 	left: 0%;
 	display: table;
-	overflow: hidden;
+	margin: auto;
+	clear: both;
 }
-.slider li {
+.slider ul li {
 	width: 25%;
 	position: relative;
 	float: left;

@@ -21,7 +21,7 @@
                     ver detalle <i class="fas fa-chevron-right"></i>
                   </a>
                 </div>
-                <img src="'.$urlBackEnd.'views/dist/'.$value["rutaImg"].'" alt="">
+                <img src="'.$urlBackEnd.substr($value["rutaImg"], 3).'" alt="">
               </div>
             </li>
             

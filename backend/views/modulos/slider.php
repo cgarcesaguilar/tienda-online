@@ -38,7 +38,7 @@
                 <th scope="row">'.$value["id"].'</th>
                 <td>'.$value["titulo"].'</td>
                 <td>'.$value["descripcion"].'</td>
-                <td><img width="200" src="views/dist/'.$value["rutaImg"].'"></td>
+                <td><img width="200" src="'.substr($value["rutaImg"], 3).'"></td>
                 <td width="100">
                   <button class="btn btn-sm btn-info btnEditarSlider" idSlider="'.$value["id"].'">
                     <i class="far fa-edit"></i>

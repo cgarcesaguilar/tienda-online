@@ -62,5 +62,5 @@ scratch. This page gets rid of all links and provides the needed markup only.
   });
 </script>
 <script src="views/dist/js/slider.js"></script>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script></body>
 </html>

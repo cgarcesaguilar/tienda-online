@@ -5,22 +5,29 @@ require_once "../models/slider.modelo.php";
 
 Class ajaxSlider {
 
-	private $id_slider;
-	private $titulo_slider;
-	private $descripcion_slider;
-	private $vinculo_slider;
-	private $imagen_slider;
+	public $id_slider;
+	public $titulo_slider;
+	public $descripcion_slider;
+	public $vinculo_slider;
+	public $imagen_slider;
 
-	public static crearSlider(){
+	public function crearSlider(){
+		$datos = array("titulo"=>$this->titulo_slider,
+						"descripcion"=>$this->descripcion_slider,
+						"vinculo"=>$this->vinculo_slider,
+						"imagen"=>$this->imagen_slider);
+
+		$respuesta = ControllerSlider::ctrCrearSlider($datos);
+
+		echo $respuesta;
+	}
+	public function editarSlider(){
 		echo 'aqui crearemos el slider';
 	}
-	public static editarSlider(){
+	public function actualizarSlider(){
 		echo 'aqui crearemos el slider';
 	}
-	public static actualizarSlider(){
-		echo 'aqui crearemos el slider';
-	}
-	public static eliminarSlider(){
+	public function eliminarSlider(){
 		echo 'aqui crearemos el slider';
 	}
 
@@ -30,6 +37,10 @@ $tipoOperacion = $_POST["tipoOperacion"];
 
 if($tipoOperacion == "insertarSlider") {
 	$crearNuevoSlider = new ajaxSlider();
+	$crearNuevoSlider -> titulo_slider = $_POST["tituloSlider"];
+	$crearNuevoSlider -> descripcion_slider = $_POST["descripcionSlider"];
+	$crearNuevoSlider -> vinculo_slider = $_POST["urlSlider"];
+	$crearNuevoSlider -> imagen_slider = $_FILES["imagenSlider"];
 	$crearNuevoSlider ->crearSlider();
 }
 
