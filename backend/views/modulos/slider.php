@@ -40,10 +40,10 @@
                 <td>'.$value["descripcion"].'</td>
                 <td><img width="200" src="'.substr($value["rutaImg"], 3).'"></td>
                 <td width="100">
-                  <button class="btn btn-sm btn-info btnEditarSlider" idSlider="'.$value["id"].'">
+                  <button class="btn btn-sm btn-info btnEditarSlider" idSlider="'.$value["id"].'" data-toggle="modal" data-target="#modal-editar-slider">
                     <i class="far fa-edit"></i>
                   </button>
-                  <button class="btn btn-sm btn-danger btnEliminarSlider" idSlider="'.$value["id"].'">
+                  <button class="btn btn-sm btn-danger btnEliminarSlider" idSlider="'.$value["id"].'" rutaImagen="'.$value["rutaImg"].'">
                     <i class="far fa-trash-alt"></i>
                   </button>
                 </td>

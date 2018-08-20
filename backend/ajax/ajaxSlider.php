@@ -10,6 +10,7 @@ Class ajaxSlider {
 	public $descripcion_slider;
 	public $vinculo_slider;
 	public $imagen_slider;
+	public $rutaActual;
 
 	public function crearSlider(){
 		$datos = array("titulo"=>$this->titulo_slider,
@@ -22,13 +23,41 @@ Class ajaxSlider {
 		echo $respuesta;
 	}
 	public function editarSlider(){
-		echo 'aqui crearemos el slider';
+		$id_slider = $this->id_slider;
+
+		$respuesta = ControllerSlider::ctrEditarSlider($id_slider);
+
+		$datos = array("id_slider"=>$respuesta["id"],
+						"titulo_slider"=>$respuesta["titulo"],
+						"descripcion"=>$respuesta["descripcion"],
+						"vinculo"=>$respuesta["url"],
+						"imagen"=>substr($respuesta["rutaImg"], 3)
+						);
+
+		echo json_encode($datos);
+
 	}
 	public function actualizarSlider(){
-		echo 'aqui crearemos el slider';
+		$datos = array( "id_slider"=>$this->id_slider,
+						"titulo"=>$this->titulo_slider,
+						"descripcion"=>$this->descripcion_slider,
+						"vinculo"=>$this->vinculo_slider,
+						"imagen"=>$this->imagen_slider,
+						"rutaActual"=>$this->rutaActual
+						);
+
+		$respuesta = ControllerSlider::ctrActualizarSlider($datos);
+
+		echo $respuesta;
 	}
 	public function eliminarSlider(){
-		echo 'aqui crearemos el slider';
+		$id_slider = $this->id_slider;
+		$ruta = $this->imagen_slider;
+
+		$respuesta = ControllerSlider::ctrEliminarSlider($id_slider, $ruta);
+
+		echo $respuesta;
+
 	}
 
 }
@@ -46,14 +75,23 @@ if($tipoOperacion == "insertarSlider") {
 
 if ($tipoOperacion == "editarSlider") {
 	$editarSlider = new ajaxSlider();
+	$editarSlider -> id_slider = $_POST["id_slider"];
 	$editarSlider -> editarSlider();
 }
 if ($tipoOperacion == "actualizarSlider") {
 	$actualizarSlider = new ajaxSlider();
+	$actualizarSlider -> id_slider = $_POST["id_slider"];
+	$actualizarSlider -> titulo_slider = $_POST["tituloSlider"];
+	$actualizarSlider -> descripcion_slider = $_POST["descripcionSlider"];
+	$actualizarSlider -> vinculo_slider = $_POST["urlSlider"];
+	$actualizarSlider -> imagen_slider = $_FILES["imagenSlider"];
+	$actualizarSlider -> rutaActual = $_POST["rutaActual"];
 	$actualizarSlider -> actualizarSlider();
 }
 if ($tipoOperacion == "eliminarSlider") {
 	$eliminarSlider = new ajaxSlider();
+	$eliminarSlider -> id_slider = $_POST["id_slider"];
+	$eliminarSlider -> imagen_slider = $_POST["rutaImagen"];
 	$eliminarSlider -> eliminarSlider();
 }
 
